@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanenteak bot's Portfolio</title>
+    <title>Chui Vanenteakbot — Portfolio</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;500;700;800&display=swap"
       rel="stylesheet"
@@ -23,7 +23,6 @@
         --surface: #fff9f0;
         --border: #d9d2c5;
         --border2: #c8c0b0;
-        --accent: #1a1a2e;
         --accent2: #2d5be3;
         --text: #1a1a1a;
         --muted: #888880;
@@ -41,7 +40,7 @@
         background: var(--bg);
         color: var(--text);
         font-family: var(--display);
-        font-size: 16px;
+        font-size: 17px;
         line-height: 1.6;
         overflow-x: hidden;
       }
@@ -58,6 +57,7 @@
         height: 64px;
         border-bottom: 1.5px solid var(--border);
         background: rgba(245, 240, 232, 0.92);
+        -webkit-backdrop-filter: blur(12px);
         backdrop-filter: blur(12px);
       }
 
@@ -67,7 +67,6 @@
         font-size: 20px;
         color: var(--text);
         letter-spacing: 0.01em;
-        font-weight: 400;
       }
 
       .nav-links {
@@ -78,13 +77,12 @@
 
       .nav-links a {
         font-family: var(--mono);
-        font-size: 13px;
+        font-size: 14px;
         color: var(--muted2);
         text-decoration: none;
         letter-spacing: 0.05em;
         transition: color 0.2s;
         position: relative;
-        font-weight: 400;
       }
 
       .nav-links a::after {
@@ -108,8 +106,8 @@
 
       .nav-badge {
         font-family: var(--mono);
-        font-size: 12px;
-        padding: 5px 14px;
+        font-size: 13px;
+        padding: 6px 16px;
         border-radius: 100px;
         background: var(--accent2);
         color: #fff;
@@ -120,8 +118,8 @@
       }
 
       .nav-badge-dot {
-        width: 6px;
-        height: 6px;
+        width: 7px;
+        height: 7px;
         border-radius: 50%;
         background: #7effa0;
         animation: pulse 2s infinite;
@@ -151,12 +149,9 @@
         align-items: center;
       }
 
-      .hero-left {
-      }
-
       .hero-label {
         font-family: var(--mono);
-        font-size: 13px;
+        font-size: 14px;
         color: var(--muted2);
         letter-spacing: 0.1em;
         margin-bottom: 2rem;
@@ -175,7 +170,7 @@
       .hero-name {
         font-family: var(--display);
         font-size: clamp(52px, 10vw, 110px);
-        font-weight: 600;
+        font-weight: 700;
         line-height: 0.95;
         letter-spacing: -0.03em;
         margin-bottom: 1.5rem;
@@ -187,20 +182,21 @@
         font-style: italic;
         font-weight: 400;
         color: var(--accent2);
+        display: block;
       }
 
       .hero-sub {
-        font-size: clamp(16px, 2vw, 20px);
+        font-size: clamp(17px, 2vw, 21px);
         color: var(--muted2);
         font-weight: 400;
         margin-bottom: 1.5rem;
         max-width: 500px;
-        line-height: 1.6;
+        line-height: 1.7;
       }
 
       .hero-typed {
         font-family: var(--mono);
-        font-size: clamp(14px, 1.5vw, 16px);
+        font-size: clamp(15px, 1.5vw, 17px);
         color: var(--accent2);
         margin-bottom: 3rem;
         min-height: 1.4em;
@@ -272,7 +268,7 @@
         border-radius: 100px;
         padding: 5px 16px;
         font-family: var(--mono);
-        font-size: 11px;
+        font-size: 12px;
         color: var(--muted2);
         letter-spacing: 0.08em;
         white-space: nowrap;
@@ -281,8 +277,8 @@
       /* BUTTONS */
       .btn {
         font-family: var(--mono);
-        font-size: 13px;
-        padding: 12px 26px;
+        font-size: 14px;
+        padding: 13px 28px;
         border-radius: 6px;
         text-decoration: none;
         letter-spacing: 0.05em;
@@ -299,17 +295,14 @@
         color: #fff;
         border: 1.5px solid var(--text);
       }
-
       .btn-dark:hover {
         background: #2d2d2d;
       }
-
       .btn-ghost {
         background: transparent;
         color: var(--text);
         border: 1.5px solid var(--border2);
       }
-
       .btn-ghost:hover {
         border-color: var(--text);
       }
@@ -337,20 +330,20 @@
 
       .section-tag {
         font-family: var(--mono);
-        font-size: 12px;
+        font-size: 13px;
         color: var(--muted);
         letter-spacing: 0.12em;
         text-transform: uppercase;
         background: var(--bg2);
         border: 1px solid var(--border);
-        padding: 4px 12px;
+        padding: 5px 14px;
         border-radius: 100px;
       }
 
       .section-title {
         font-family: var(--display);
-        font-size: clamp(36px, 5vw, 64px);
-        font-weight: 600;
+        font-size: clamp(38px, 5vw, 64px);
+        font-weight: 700;
         letter-spacing: -0.03em;
         line-height: 1;
         color: var(--text);
@@ -374,7 +367,7 @@
       .about-text p {
         font-size: 18px;
         color: var(--muted2);
-        line-height: 1.8;
+        line-height: 1.85;
         font-weight: 400;
         margin-bottom: 1.5rem;
       }
@@ -400,7 +393,7 @@
       .stat-num {
         font-family: var(--display);
         font-size: 52px;
-        font-weight: 600;
+        font-weight: 700;
         color: var(--text);
         line-height: 1;
         margin-bottom: 4px;
@@ -409,7 +402,7 @@
 
       .stat-label {
         font-family: var(--mono);
-        font-size: 12px;
+        font-size: 13px;
         color: var(--muted);
         letter-spacing: 0.08em;
         text-transform: uppercase;
@@ -424,8 +417,8 @@
 
       .skill-pill {
         font-family: var(--mono);
-        font-size: 14px;
-        padding: 8px 18px;
+        font-size: 15px;
+        padding: 9px 20px;
         border-radius: 100px;
         border: 1.5px solid var(--border2);
         background: var(--surface);
@@ -446,13 +439,43 @@
         color: #fff;
         border-color: var(--text);
       }
-
       .skill-pill.main:hover {
         background: var(--accent2);
         border-color: var(--accent2);
       }
 
-      /* PROJECTS */
+      /* YEAR GROUP */
+      .year-group {
+        margin-bottom: 4rem;
+      }
+
+      .year-label {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .year-label-text {
+        font-family: var(--mono);
+        font-size: 13px;
+        color: var(--accent2);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        background: #eef2ff;
+        border: 1.5px solid rgba(45, 91, 227, 0.2);
+        padding: 6px 16px;
+        border-radius: 100px;
+      }
+
+      .year-label-line {
+        flex: 1;
+        height: 1.5px;
+        background: var(--border);
+      }
+
+      /* PROJECTS GRID */
       .projects-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -483,21 +506,21 @@
         color: var(--accent2);
       }
 
-      .project-card.featured {
+      .project-card.wide {
         grid-column: span 2;
       }
 
       .project-num {
         font-family: var(--mono);
-        font-size: 12px;
+        font-size: 13px;
         color: var(--muted);
         letter-spacing: 0.1em;
       }
 
       .project-title {
         font-family: var(--display);
-        font-size: clamp(22px, 2.5vw, 30px);
-        font-weight: 600;
+        font-size: clamp(20px, 2.5vw, 28px);
+        font-weight: 700;
         letter-spacing: -0.02em;
         color: var(--text);
         line-height: 1.2;
@@ -506,7 +529,7 @@
       .project-desc {
         font-size: 15px;
         color: var(--muted2);
-        line-height: 1.7;
+        line-height: 1.75;
         font-weight: 400;
         flex: 1;
       }
@@ -528,8 +551,8 @@
 
       .ptag {
         font-family: var(--mono);
-        font-size: 11px;
-        padding: 3px 10px;
+        font-size: 12px;
+        padding: 4px 11px;
         border: 1px solid var(--border);
         border-radius: 100px;
         color: var(--muted2);
@@ -549,11 +572,10 @@
         transition: all 0.2s;
       }
 
-      .no-link {
-        opacity: 0.5;
+      .no-hover {
         cursor: default;
       }
-      .no-link:hover {
+      .no-hover:hover {
         border-color: var(--border);
         transform: none;
         box-shadow: none;
@@ -570,7 +592,7 @@
       .contact-headline {
         font-family: var(--display);
         font-size: clamp(32px, 5vw, 58px);
-        font-weight: 600;
+        font-weight: 700;
         letter-spacing: -0.03em;
         line-height: 1.05;
         margin-bottom: 1.5rem;
@@ -584,7 +606,7 @@
       }
 
       .contact-sub {
-        font-size: 16px;
+        font-size: 17px;
         color: var(--muted2);
         line-height: 1.7;
         margin-bottom: 2rem;
@@ -618,7 +640,7 @@
 
       .cl-label {
         font-family: var(--mono);
-        font-size: 11px;
+        font-size: 12px;
         color: var(--muted);
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -627,10 +649,9 @@
 
       .cl-val {
         font-family: var(--mono);
-        font-size: 14px;
+        font-size: 15px;
         color: inherit;
       }
-
       .cl-arrow {
         font-size: 18px;
         transition: transform 0.2s;
@@ -650,7 +671,7 @@
 
       .footer-left {
         font-family: var(--mono);
-        font-size: 13px;
+        font-size: 14px;
         color: var(--muted);
       }
       .footer-left span {
@@ -658,7 +679,7 @@
       }
       .footer-right {
         font-family: var(--mono);
-        font-size: 13px;
+        font-size: 14px;
         color: var(--muted);
       }
 
@@ -710,7 +731,7 @@
         .contact-layout {
           grid-template-columns: 1fr;
         }
-        .project-card.featured {
+        .project-card.wide {
           grid-column: span 1;
         }
         footer {
@@ -722,7 +743,6 @@
       }
     </style>
   </head>
-
   <body>
     <nav>
       <div class="nav-logo">Chui Vanenteakbot</div>
@@ -733,7 +753,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-badge">
-        <span class="nav-badge-dot"></span>Open to Work
+        <span class="nav-badge-dot"></span>Open To Work
       </div>
     </nav>
 
@@ -742,7 +762,7 @@
       <div class="hero-grid">
         <div class="hero-left">
           <div class="hero-label">Software Engineer · Cambodia</div>
-          <h1 class="hero-name">Chui<br /><em>Vanenteakbot</em></h1>
+          <h1 class="hero-name">Chui<em>Vanenteakbot</em></h1>
           <p class="hero-sub">
             Year 3 Software Engineering student at Limkokwing University. I
             build things for the web.
@@ -751,8 +771,8 @@
             <span id="typed"></span><span class="cursor"></span>
           </p>
           <div class="hero-cta">
-            <a href="#projects" class="btn btn-dark">See my work →</a>
-            <a href="#contact" class="btn btn-ghost">Get in touch</a>
+            <a href="#projects" class="btn btn-dark">See My Work →</a>
+            <a href="#contact" class="btn btn-ghost">Get In Touch</a>
           </div>
         </div>
         <div class="hero-photo-wrap">
@@ -799,10 +819,10 @@
         <div class="about-stats">
           <div class="stat-card">
             <div class="stat-num">3</div>
-            <div class="stat-label">Years in</div>
+            <div class="stat-label">Years In</div>
           </div>
           <div class="stat-card">
-            <div class="stat-num">5+</div>
+            <div class="stat-num">8+</div>
             <div class="stat-label">Projects</div>
           </div>
           <div class="stat-card">
@@ -811,7 +831,7 @@
           </div>
           <div class="stat-card">
             <div class="stat-num">∞</div>
-            <div class="stat-label">Still learning</div>
+            <div class="stat-label">Still Learning</div>
           </div>
         </div>
       </div>
@@ -834,6 +854,7 @@
         <span class="skill-pill main">Bootstrap</span>
         <span class="skill-pill">JavaScript</span>
         <span class="skill-pill">Java</span>
+        <span class="skill-pill">C++</span>
         <span class="skill-pill">Python</span>
         <span class="skill-pill">Git</span>
         <span class="skill-pill">Netlify</span>
@@ -848,114 +869,201 @@
         <span class="section-tag">03</span>
         <h2 class="section-title">Projects</h2>
       </div>
-      <div class="projects-grid">
-        <a
-          class="project-card featured"
-          href="https://rococo-cajeta-9c3979.netlify.app"
-          target="_blank"
-        >
-          <div class="project-num">01 — featured</div>
-          <h3 class="project-title">Password Generator</h3>
-          <p class="project-desc">
-            Browser-based password generator with customizable length, character
-            sets, copy-to-clipboard, and instant visual feedback. Zero
-            dependencies, all vanilla.
-          </p>
-          <div class="project-footer">
-            <div class="project-tags">
-              <span class="ptag">HTML</span><span class="ptag">CSS</span>
-              <span class="ptag">JavaScript</span
-              ><span class="ptag">Bootstrap</span>
-            </div>
-            <span class="project-arrow">↗</span>
-          </div>
-        </a>
 
-        <a
-          class="project-card"
-          href="https://imaginative-arithmetic-0b708chi.netlify.app/"
-          target="_blank"
-        >
-          <div class="project-num">02</div>
-          <h3 class="project-title">Calculator</h3>
-          <p class="project-desc">
-            Clean and responsive calculator for basic arithmetic. Built with
-            vanilla HTML, CSS, and JS — simple but solid.
-          </p>
-          <div class="project-footer">
-            <div class="project-tags">
-              <span class="ptag">HTML</span><span class="ptag">CSS</span
-              ><span class="ptag">JavaScript</span>
+      <!-- YEAR 2 SEM 1 -->
+      <div class="year-group">
+        <div class="year-label">
+          <span class="year-label-text">Year 2 · Semester 1</span>
+          <div class="year-label-line"></div>
+        </div>
+        <div class="projects-grid">
+          <a
+            class="project-card wide"
+            href="https://clonestarbuck-vanenteakbot.netlify.app"
+            target="_blank"
+          >
+            <div class="project-num">01</div>
+            <h3 class="project-title">Starbucks Clone</h3>
+            <p class="project-desc">
+              A multi-page Starbucks website clone featuring a menu, rewards,
+              gift cards, sign in, and join pages. Built with pure HTML, CSS,
+              and Bootstrap — first major web project.
+            </p>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="ptag">HTML</span><span class="ptag">CSS</span
+                ><span class="ptag">Bootstrap</span>
+              </div>
+              <span class="project-arrow">↗</span>
             </div>
-            <span class="project-arrow">↗</span>
-          </div>
-        </a>
+          </a>
 
-        <a
-          class="project-card"
-          href="https://scoreboardbybot.netlify.app"
-          target="_blank"
-        >
-          <div class="project-num">03</div>
-          <h3 class="project-title">Scoreboard App</h3>
-          <p class="project-desc">
-            Real-time scoreboard for tracking home and away scores. Minimal UI,
-            works instantly, no setup needed.
-          </p>
-          <div class="project-footer">
-            <div class="project-tags">
-              <span class="ptag">HTML</span><span class="ptag">CSS</span
-              ><span class="ptag">JavaScript</span>
+          <a
+            class="project-card"
+            href="https://rococo-cajeta-9c3979.netlify.app"
+            target="_blank"
+          >
+            <div class="project-num">02</div>
+            <h3 class="project-title">Password Generator</h3>
+            <p class="project-desc">
+              Browser-based password generator with customizable length,
+              character sets, copy-to-clipboard, and instant visual feedback.
+            </p>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="ptag">HTML</span><span class="ptag">CSS</span
+                ><span class="ptag">JavaScript</span
+                ><span class="ptag">Bootstrap</span>
+              </div>
+              <span class="project-arrow">↗</span>
             </div>
-            <span class="project-arrow">↗</span>
-          </div>
-        </a>
+          </a>
 
-        <a
-          class="project-card"
-          href="https://github.com/Bot007Bott/spend-tracker"
-          target="_blank"
-        >
-          <div class="project-num">05</div>
-          <h3 class="project-title">SpendTracker</h3>
-          <p class="project-desc">
-            Full-stack personal finance app with expense tracking, budget
-            management, recurring reminders, charts, CSV export, and USD/KHR
-            multi-currency support. Dark VS Code theme throughout.
-          </p>
-          <div class="project-footer">
-            <div class="project-tags">
-              <span class="ptag">Laravel 12</span>
-              <span class="ptag">PHP</span>
-              <span class="ptag">MySQL</span>
-              <span class="ptag">Bootstrap 5</span>
-              <span class="ptag">Chart.js</span>
+          <a
+            class="project-card"
+            href="https://imaginative-arithmetic-0b708chi.netlify.app"
+            target="_blank"
+          >
+            <div class="project-num">03</div>
+            <h3 class="project-title">Calculator</h3>
+            <p class="project-desc">
+              Clean and responsive calculator for basic arithmetic. Built with
+              vanilla HTML, CSS, and JavaScript — simple but solid.
+            </p>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="ptag">HTML</span><span class="ptag">CSS</span
+                ><span class="ptag">JavaScript</span>
+              </div>
+              <span class="project-arrow">↗</span>
             </div>
-            <span class="project-arrow">↗</span>
-          </div>
-        </a>
+          </a>
 
-        <div class="project-card no-link">
-          <div class="project-num">04</div>
-          <h3 class="project-title">Laravel CRUD System</h3>
-          <p class="project-desc">
-            Full product management system with Laravel 11, Blade templates, and
-            MySQL. Built as a university final exam project.
-          </p>
-          <div class="project-footer">
-            <div class="project-tags">
-              <span class="ptag">Laravel</span><span class="ptag">PHP</span
-              ><span class="ptag">MySQL</span>
+          <a
+            class="project-card"
+            href="https://scoreboardbybot.netlify.app"
+            target="_blank"
+          >
+            <div class="project-num">04</div>
+            <h3 class="project-title">Scoreboard App</h3>
+            <p class="project-desc">
+              Real-time scoreboard for tracking home and away scores. Minimal
+              UI, works instantly in the browser with no setup needed.
+            </p>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="ptag">HTML</span><span class="ptag">CSS</span
+                ><span class="ptag">JavaScript</span>
+              </div>
+              <span class="project-arrow">↗</span>
             </div>
-            <span
-              style="
-                font-family: var(--mono);
-                font-size: 12px;
-                color: var(--muted);
-              "
-              >local only</span
-            >
-          </div>
+          </a>
+
+          <a
+            class="project-card"
+            href="https://github.com/Bot007Bott/library-management-cpp"
+            target="_blank"
+          >
+            <div class="project-num">05</div>
+            <h3 class="project-title">Library Management System</h3>
+            <p class="project-desc">
+              Terminal-based C++ system for managing books and borrowers with
+              full CRUD operations, borrow/return transactions, and file-based
+              data persistence.
+            </p>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="ptag">C++</span><span class="ptag">File I/O</span>
+              </div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- YEAR 2 SEM 2 -->
+      <div class="year-group">
+        <div class="year-label">
+          <span class="year-label-text">Year 2 · Semester 2</span>
+          <div class="year-label-line"></div>
+        </div>
+        <div class="projects-grid">
+          <a
+            class="project-card wide"
+            href="https://github.com/Bot007Bott/inventory-management-java"
+            target="_blank"
+          >
+            <div class="project-num">06</div>
+            <h3 class="project-title">Inventory Management System</h3>
+            <p class="project-desc">
+              A Java Swing GUI desktop application with role-based access for
+              Admin and Customer. Features product management, category
+              filtering, shopping cart, user registration and login, and a
+              SQLite database for persistent storage.
+            </p>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="ptag">Java</span
+                ><span class="ptag">Java Swing</span
+                ><span class="ptag">SQLite</span><span class="ptag">Maven</span
+                ><span class="ptag">OOP</span>
+              </div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- YEAR 3 SEM 1 -->
+      <div class="year-group">
+        <div class="year-label">
+          <span class="year-label-text">Year 3 · Semester 1</span>
+          <div class="year-label-line"></div>
+        </div>
+        <div class="projects-grid">
+          <a
+            class="project-card"
+            href="https://github.com/Bot007Bott/spend-tracker"
+            target="_blank"
+          >
+            <div class="project-num">07</div>
+            <h3 class="project-title">SpendTracker</h3>
+            <p class="project-desc">
+              Full-stack personal finance app with expense tracking, budget
+              management, recurring reminders, charts, CSV export, and USD/KHR
+              multi-currency support.
+            </p>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="ptag">Laravel 12</span><span class="ptag">PHP</span
+                ><span class="ptag">MySQL</span
+                ><span class="ptag">Bootstrap 5</span
+                ><span class="ptag">Chart.js</span>
+              </div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
+
+          <a
+            class="project-card"
+            href="https://github.com/Bot007Bott/pos_system"
+            target="_blank"
+          >
+            <div class="project-num">08</div>
+            <h3 class="project-title">POS System</h3>
+            <p class="project-desc">
+              A full product management and point-of-sale system built with
+              Laravel 11, Blade templates, and MySQL. Developed as a university
+              final exam project.
+            </p>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="ptag">Laravel 11</span><span class="ptag">PHP</span
+                ><span class="ptag">MySQL</span><span class="ptag">Blade</span>
+              </div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -971,17 +1079,17 @@
       <div class="contact-layout">
         <div>
           <h3 class="contact-headline">
-            Got a project?<br />Let's make it <em>happen.</em>
+            Got A Project?<br />Let's Make It <em>Happen.</em>
           </h3>
           <p class="contact-sub">
-            Open to freelance work, collabs, or even just a conversation about
-            tech. Based in Cambodia, working remotely.
+            Open to freelance work, collaborations, or even just a conversation
+            about tech. Based in Cambodia, working remotely.
           </p>
           <a
             href="https://mail.google.com/mail/?view=cm&to=chuibot5@gmail.com"
             target="_blank"
             class="btn btn-dark"
-            >send an email →</a
+            >Send An Email →</a
           >
         </div>
         <div class="contact-links">
@@ -1040,9 +1148,9 @@
 
     <script>
       const phrases = [
-        "Building web apps with Laravel.",
-        "Turning ideas into products.",
-        "Open for freelance work.",
+        "Building Web Apps With Laravel.",
+        "Turning Ideas Into Products.",
+        "Open For Freelance Work.",
       ];
       let pi = 0,
         ci = 0,
