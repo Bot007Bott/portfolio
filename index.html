@@ -645,6 +645,10 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1.5rem;
       }
+      .reports-grid-single {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 100%;
+      }
       .report-card {
         border: 1.5px solid var(--border);
         border-radius: 6px;
@@ -711,7 +715,7 @@
       /* CERTIFICATES */
       .certs-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
       }
       .cert-card {
@@ -886,62 +890,138 @@
         .hero-grid {
           grid-template-columns: 1fr;
         }
+
         .hero-photo-wrap {
           width: 220px;
           margin: 0 auto;
           order: -1;
         }
+
         .cv-grid {
           grid-template-columns: 1fr;
         }
+
         .reports-grid {
           grid-template-columns: 1fr 1fr;
         }
+
         .certs-grid {
           grid-template-columns: 1fr 1fr;
         }
       }
+
       @media (max-width: 768px) {
         nav {
           padding: 0 1.5rem;
         }
+
         .nav-links {
           gap: 1rem;
         }
+
         .nav-badge {
           display: none;
         }
+
         .hero,
         .section {
           padding-left: 1.5rem;
           padding-right: 1.5rem;
         }
+
         .divider {
           margin: 0 1.5rem;
         }
+
         .about-grid,
         .projects-grid,
         .contact-layout,
         .cv-achievements {
           grid-template-columns: 1fr;
         }
+
         .project-card.wide {
           grid-column: span 1;
         }
+
         .reports-grid,
         .certs-grid {
           grid-template-columns: 1fr;
         }
+
         .cv-download {
           flex-direction: column;
           gap: 1rem;
           align-items: flex-start;
         }
+
         footer {
           flex-direction: column;
           gap: 0.5rem;
           text-align: center;
           padding: 1.5rem;
+        }
+
+        /* HAMBURGER */
+        .nav-toggle {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 4px;
+        }
+
+        .nav-toggle span {
+          display: block;
+          width: 24px;
+          height: 2px;
+          background: var(--text);
+          border-radius: 2px;
+          transition: all 0.3s;
+        }
+
+        .nav-toggle.open span:nth-child(1) {
+          transform: translateY(7px) rotate(45deg);
+        }
+
+        .nav-toggle.open span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .nav-toggle.open span:nth-child(3) {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 64px;
+          left: 0;
+          right: 0;
+          background: rgba(245, 240, 232, 0.98);
+          -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+          flex-direction: column;
+          gap: 0;
+          border-bottom: 1.5px solid var(--border);
+          z-index: 99;
+        }
+
+        .nav-links.open {
+          display: flex;
+        }
+
+        .nav-links li a {
+          display: block;
+          padding: 1rem 1.5rem;
+          border-bottom: 1px solid var(--border);
+          font-size: 14px;
+        }
+
+        .nav-links a::after {
+          display: none;
         }
       }
     </style>
@@ -961,6 +1041,9 @@
       <div class="nav-badge">
         <span class="nav-badge-dot"></span>Open To Work
       </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
 
     <!-- HERO -->
@@ -1170,7 +1253,13 @@
           <h4>Full CV / Resume</h4>
           <p>Download the complete PDF version of my CV</p>
         </div>
-        <a href="cv.pdf" download class="btn btn-blue">Download CV ↓</a>
+        <a
+          href="cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-blue"
+          >Preview CV ↗</a
+        >
       </div>
     </div>
 
@@ -1470,7 +1559,7 @@
           <span class="year-label-text">Foundation — Semester 1</span>
           <div class="year-label-line"></div>
         </div>
-        <div class="reports-grid">
+        <div class="reports-grid reports-grid-single">
           <a class="report-card" href="report-koh-kong.pdf" target="_blank">
             <div class="report-icon">🌿</div>
             <div class="report-subject">Communication Skills 1</div>
@@ -1810,6 +1899,18 @@
         { threshold: 0.1 },
       );
       document.querySelectorAll(".reveal").forEach((r) => obs.observe(r));
+      const toggle = document.getElementById("navToggle");
+      const navLinks = document.querySelector(".nav-links");
+      toggle.addEventListener("click", () => {
+        toggle.classList.toggle("open");
+        navLinks.classList.toggle("open");
+      });
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          toggle.classList.remove("open");
+          navLinks.classList.remove("open");
+        });
+      });
     </script>
   </body>
 </html>
